@@ -35,10 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.style.display = "none";
         }
     });
+    
 
     // Video control (Play/Pause) on hero section hover
     const hero = document.querySelector('.hero');
     const video = document.getElementById('background-video');
+    const description = this.dataset.description || "No description available.";
+
 
     hero.addEventListener('mouseenter', () => {
         video.play();
