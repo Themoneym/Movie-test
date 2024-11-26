@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="camp.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="card">
+        <nav>
+          <h2>GCTU <span>Trips</span></h2>
+          <ul>
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="page2.html">Register</a></li>
+          </ul>
+        </nav>
+        <div class="article">
+          <div class="left">
+            <h1>Register for the <span>Trip</span></h1>
+            <form action="#" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="student-id">Student ID:</label>
+              <input type="text" id="student-id" name="student-id" required />
+
+              <label for="participants">Number of Participants:</label>
+              <select id="participants" name="participants" required>
+                <option value="2">2 Participants</option>
+                <option value="3">3 Participants</option>
+                <option value="4">4 Participants</option>
+              </select>
+
+              <label for="payment">Payment Method:</label>
+              <select id="payment" name="payment" required>
+                <option value="momo">Mobile Money</option>
+                <option value="card">Credit/Debit Card</option>
+                <option value="cash">Cash</option>
+              </select>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
