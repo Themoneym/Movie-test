@@ -23,7 +23,7 @@
             background-size: 100%;
             opacity: 0.4; 
             z-index: -1;  
-}
+        }
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -99,6 +99,7 @@
             float: right;
             font-size: 28px;
             font-weight: bold;
+            cursor: pointer;
         }
         .close:hover,
         .close:focus {
@@ -135,9 +136,10 @@
     <div class="section">
         <h2>Top Picks for You</h2>
         <div class="row">
-            <img alt="Show poster 6" height="300" src="" width="200"/>
-            <img alt="Show poster 7" height="300" src="" width="200"/>
-            <img alt="Show poster 8" height="300" src="" width="200"/>
+            <!-- Example images for the top picks -->
+            <img alt="Show poster 6" height="300" src="../Photos/Naruto.jpg" width="200"/>
+            <img alt="Show poster 7" height="300" src="../Photos/Demon Slayer.jpg" width="200"/>
+            <img alt="Show poster 8" height="300" src="../Photos/Fairytail.jpg" width="200"/>
         </div>
     </div>
     <div class="footer">
@@ -154,6 +156,38 @@
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    <!-- External Script to handle Modal -->
+    <script>
+        // Modal functionality
+        const modal = document.getElementById("showModal");
+        const closeBtn = modal.querySelector(".close");
+
+        // Event listener to open the modal when an image is clicked
+        const images = document.querySelectorAll('.section .row img');
+        images.forEach(img => {
+            img.addEventListener('click', function() {
+                const title = this.alt; 
+                const description = `Description for ${title}`; // Example description
+
+                modal.querySelector("#modalTitle").textContent = title;
+                modal.querySelector("#modalImage").src = this.src;
+                modal.querySelector("#modalDescription").textContent = description;
+
+                modal.style.display = "block"; // Show modal
+            });
+        });
+
+        // Event listener to close the modal
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none"; // Hide modal
+        });
+
+        // Close the modal if clicked outside of it
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
