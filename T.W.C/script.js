@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         modalImage.src = image;
         modalDescription.textContent = description;
         modal.style.display = "block";
+        modal.classList.add('show'); // To show
+        modal.classList.remove('show'); // To hide
     }
 
     // Add event listener for opening the modal when an image is clicked
