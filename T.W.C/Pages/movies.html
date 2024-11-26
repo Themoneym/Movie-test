@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Watchers Club</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000000;
+        }
+        .navbar img {
+            width: 100px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar ul li {
+            display: inline;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .section {
+            padding: 20px;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .section .row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+        .section .row img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .footer {
+            padding: 20px;
+            background-color: #141414;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img alt="The Watchers Club" height="100" src="../Photos/logos.jpg" width="100"/>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="TV shows.html">TV Shows</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="Anime.html">Anime</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Trending Shows</h2>
+        <div class="row">
+            <img alt="Show poster 1" height="300" src="../Photos/Terrifier.jpg" width="200"/>
+            <img alt="Show poster 2" height="300" src="../Photos/Dont move.jpg" width="200"/>
+            <img alt="Show poster 3" height="300" src="../Photos/transformers.jpg" width="200"/>
+            <img alt="Show poster 4" height="300" src="../Photos/IT.jpg" width="200"/>
+            <img alt="Show poster 5" height="300" src="../Photos/Fall guy.jpg" width="200"/>
+            <img alt="Show poster 6" height="300" src="../Photos/Dead.jpg" width="200"/>
+            <img alt="Show poster 7" height="300" src="../Photos/Red one.jpg" width="200"/>
+            <img alt="Show poster 8" height="300" src="../Photos/Shang.jpg" width="200"/>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Top Picks for You</h2>
+        <div class="row">
+            <img alt="Show poster 6" height="300" src="../Photos/shift.jpg" width="200"/>
+            <img alt="Show poster 7" height="300" src="../Photos/smile.jpg" width="200"/>
+            <img alt="Show poster 8" height="300" src="../Photos/Soul.jpg" width="200"/>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2023 The Watchers Club. All rights reserved.</p>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="showModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">TV Show Title</h2>
+            <img id="modalImage" src="" alt="TV Show Poster" />
+            <p id="modalDescription">TV show description goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
